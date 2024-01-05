@@ -55,4 +55,11 @@ public class FavoriteService {
         Favorite favorite = new Favorite(favoriteRequest.getMovieId(),movieUser);
         return this.favoriteRepository.save(favorite);
     }
+
+    public boolean isFavorited(String username, Long filmId) {
+        // Implement your logic to check if the movie is favorited by the user
+        // This might involve querying a database, checking a cache, etc.
+        MovieUser movieUser = this.userRepository.findByUserName(username);
+        return favoriteRepository.existsByMovieIdAndMovieUser(filmId, movieUser);
+    }
 }

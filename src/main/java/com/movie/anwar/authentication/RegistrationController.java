@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping(path = "/register",
+@RequestMapping(path = "api/v1/register",
                 produces="application/json"
 )
 @CrossOrigin(origins = "*")

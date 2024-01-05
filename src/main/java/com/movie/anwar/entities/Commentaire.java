@@ -3,6 +3,7 @@ package com.movie.anwar.entities;
 import org.springframework.stereotype.Component;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,7 +21,7 @@ public class Commentaire {
 
     private Long movieId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private MovieUser movieUser;
 
 
