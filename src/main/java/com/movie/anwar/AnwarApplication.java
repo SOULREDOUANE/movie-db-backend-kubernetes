@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+// import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class AnwarApplication {
@@ -28,25 +28,25 @@ public class AnwarApplication {
         SpringApplication.run(AnwarApplication.class, args);
     }
 
-    @Bean
-    public CommandLineRunner initializeData() {
-        return args -> {
-            MovieUser movieUser = new MovieUser("soul","soul");
-            userRepository.save(movieUser);
+    // @Bean
+    // public CommandLineRunner initializeData() {
+    //     return args -> {
+    //         MovieUser movieUser = new MovieUser("soul","soul");
+    //         userRepository.save(movieUser);
 
-            Favorite favorite1 = new Favorite(13131L, movieUser);
-            Favorite favorite2 = new Favorite(3131L, movieUser);
-            Favorite favorite3 = new Favorite(131L, movieUser);
-            favoriteRepository.save(favorite1);
-            favoriteRepository.save(favorite2);
-            favoriteRepository.save(favorite3);
-			// -------------
-            Commentaire commentaire = new Commentaire("i like it",232L,movieUser);
-            Commentaire commentaire1= new Commentaire("it is not good",232L,movieUser);
-            Commentaire commentaire2 = new Commentaire("it the best i've ever watched",232L,movieUser);
-            commentaireRepository.save(commentaire);
-            commentaireRepository.save(commentaire1);
-            commentaireRepository.save(commentaire2);
-        };
-    }
+    //         Favorite favorite1 = new Favorite(13131L, movieUser);
+    //         Favorite favorite2 = new Favorite(3131L, movieUser);
+    //         Favorite favorite3 = new Favorite(131L, movieUser);
+    //         favoriteRepository.save(favorite1);
+    //         favoriteRepository.save(favorite2);
+    //         favoriteRepository.save(favorite3);
+	// 		// -------------
+    //         Commentaire commentaire = new Commentaire("i like it",232L,movieUser);
+    //         Commentaire commentaire1= new Commentaire("it is not good",232L,movieUser);
+    //         Commentaire commentaire2 = new Commentaire("it the best i've ever watched",232L,movieUser);
+    //         commentaireRepository.save(commentaire);
+    //         commentaireRepository.save(commentaire1);
+    //         commentaireRepository.save(commentaire2);
+    //     };
+    // }
 }
